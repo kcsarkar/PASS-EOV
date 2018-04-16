@@ -21,3 +21,51 @@ iv) X-ray surface brightness including metal contribution from free-free and fre
 PASS currently supports the binary datafiles generated from PLUTO (mignone etal, 2007) 1D/2D/3D Spherical/Cylindrical/cartesian simulations.
 
 Let's hope for the best.
+
+# ---------------------------------------------------------
+
+### Additional support in PASS-1.1 compared to PASS-1.0
+### Changes completed on 03rd March 2017
+
+    1. Cartesian coordinates
+    2. Autodetects negative Y/Z ranges and start computation accordingly
+    3. Can work with multiple files (need to mention in the GUI or head.h)
+    4. Does not load additional variables into RAM thus expanding opportunity to
+    work with high resolution 3D data.
+
+ Technical Changes
+ 
+    1. Changed data structure from 1D array to a structure of variables so that 
+      individual variables can be loaded independently.
+    2. The mentioned number of projection grids now accommodate the whole range
+    (unlike EOV-1.0 where this grid would cover only the positive quadrant)
+    3. The python GUI has been upgraded to work with new PLUTO versions  
+
+
+###
+###  Changes from pass-1.1 to pass-1.2
+###  Completed on 23rd March 2017
+
+    1. The major upgradation of this version is to incorporate a viewing angle
+       in pass. The new version of pass can rotate the data around Y-axis of 
+	PLUTO. The code now requires input THETA which is the angle between 
+	PLUTO X-axis and the .
+    2. The data type of the input files have to be mentioned now in the GUI/head.h.
+	This chage has been incorporated to work with both float and double
+	precision data. While float is more suitable for saving large 3D datasets,
+	double may be preferred to save high precision data.
+
+  Technical changes
+
+    1. No major upgradation
+
+ 
+###
+### Changes from pass 1.2 to 1.4
+### Completed on 15th April, 2018
+
+    1. Added support for APEC and RS plasma models
+
+   Technical changes:
+	
+     1. Nothing major.
