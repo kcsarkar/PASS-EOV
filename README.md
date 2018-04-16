@@ -1,4 +1,4 @@
-# PASS-EOV
+# PASS - EOV
 This is Projection Analysis Software for Simulations. version Edge On View
 Writer: Kartick C Sarkar
 Last updated: 15.04.2018
